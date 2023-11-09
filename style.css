@@ -147,7 +147,7 @@ body {
   height: 28px;
 }
 
-.header-navbar__count {
+.count {
   font-size: 10px;
   text-align: center;
   width: 16px;
@@ -159,12 +159,13 @@ body {
   padding: 0 2px;
   font-weight: 700;
   border-radius: 16px;
+  color: var(--system-white, #fff);
 }
 
 .cart-container {
   border-radius: 24px 24px 0px 0px;
   background: #f6f6fa;
-  padding: 22px 24px 40px 24px;
+  padding: 22px 24px 50px 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
@@ -390,6 +391,75 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   line-height: 24px;
 }
 
+.cart-order-result__item {
+  display: flex;
+  gap: 32px;
+  margin-top: 17px;
+  margin-bottom: 18px;
+}
+
+.cart-order-result__item-title,
+.cart-order-result__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cart-order-result__item-title {
+  letter-spacing: 0.3px;
+}
+
+.cart-order-result__item-title-item1 {
+  margin-bottom: 22px;
+}
+
+.cart-order-result__item-title-item2 {
+  margin-bottom: 3px;
+}
+
+.cart-order-result__item-title-item3 {
+  margin-bottom: 34px;
+}
+
+.cart-order-result__item-img {
+  display: flex;
+  gap: 8px;
+  margin-left: 1px;
+}
+
+.cart-order-result__item-img img {
+  width: 40px;
+  height: 56px;
+  border-radius: 8px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
+    url(<path-to-image>), lightgray 50% / cover no-repeat, url(<path-to-image>),
+    lightgray -0.855px -1.048px / 104.072% 103.363% no-repeat;
+}
+
+.cart-result-order-container-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-result-order-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-result-order {
+  width: 638px;
+  padding: 16px 24px 24px 24px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background: var(--background-white, #fff);
+}
+
 .cart-order-container {
   border-radius: 16px;
   background: var(--background-white, #fff);
@@ -403,7 +473,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   max-height: 604px;
 }
 
-.cart-order-sum {
+.cart-order-result {
   margin-bottom: 8px;
   font-size: 24px;
   font-weight: 700;
@@ -411,10 +481,74 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   letter-spacing: -0.24px;
 }
 
-.cart-order-sum span {
+.cart-order-result span {
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.2px;
+}
+
+.cart-order-result a {
+  color: var(--system-magenta, #cb11ab);
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.cart-order-result__card {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  letter-spacing: -0.1px;
+}
+
+.cart-order-result__card-pay p {
+  color: var(--system-gray, #9797af);
+  font-size: 13px;
+  line-height: 16px; /* 123.077% */
+}
+
+.cart-order__form {
+  display: flex;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 28px;
+}
+
+.form__box-items {
+  display: flex;
+  gap: 24px;
+}
+
+.form__item {
+  color: var(--system-gray, #9797af);
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  border-bottom: 1px solid var(--rulers-rulers-input, rgba(0, 0, 0, 0.2));
+}
+
+.cart-order-result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-order-result__card img {
+  background: var(--background-smoky, #f6f6fa);
+  border-radius: 4px;
+}
+
+.cart-result__item-info-adress-info {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 5px;
 }
 
 .cart-order {
@@ -422,12 +556,13 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   letter-spacing: 0.09px;
 }
 
-.cart-order-sum,
+.cart-order-result,
 .cart-order__info,
 .cart-order__delivery-header,
 .cart-order__payment-header {
   display: flex;
   justify-content: space-between;
+  column-gap: 35px;
 }
 
 .cart-order__delivery,
@@ -501,6 +636,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   font-size: 13px;
   line-height: 16px;
   border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+  letter-spacing: 0.1px;
 }
 
 .cart-order__return-delivery-info p {
@@ -597,6 +733,11 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 
 .out-stock {
   display: none;
+}
+
+.result {
+  background-color: transparent;
+  padding: 0;
 }
 
 .checkbox,

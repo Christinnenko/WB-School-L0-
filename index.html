@@ -62,8 +62,7 @@
               class="header-navbar__cart-img"
               src="image/header__cart.svg"
               alt="Корзина"
-            />Корзина
-            <div class="header-navbar__count">3</div></a
+            />Корзина <span class="count">3</span></a
           >
         </nav>
       </div>
@@ -259,10 +258,10 @@
             <div class="cart-product out-of-stock">
               <div class="cart-product__left">
                 <div class="checkbox-container">
-                  <input class="checkbox" type="checkbox" id="select1" />
+                  <input class="checkbox" type="checkbox" id="select4" />
                   <label
                     class="custom-checkbox out-stock"
-                    for="select1"
+                    for="select4"
                   ></label>
                   <a href="#"
                     ><img
@@ -326,11 +325,11 @@
                   <input
                     class="checkbox out-of-stock"
                     type="checkbox"
-                    id="select2"
+                    id="select5"
                   />
                   <label
                     class="custom-checkbox out-stock"
-                    for="select2"
+                    for="select5"
                   ></label>
                   <a href="#"
                     ><img
@@ -392,10 +391,10 @@
             <div class="cart-product out-of-stock">
               <div class="cart-product__left">
                 <div class="checkbox-container">
-                  <input class="checkbox" type="checkbox" id="select3" />
+                  <input class="checkbox" type="checkbox" id="select6" />
                   <label
                     class="custom-checkbox out-stock"
-                    for="select3"
+                    for="select6"
                   ></label>
                   <a href="#"
                     ><img
@@ -455,10 +454,135 @@
             </div>
           </div>
         </div>
+        <div class="cart-result-order-container-items">
+          <div class="cart-result-order-container">
+            <div class="cart-result-order">
+              <div class="cart-order-result">
+                <h4>Способ доставки</h4>
+                <a href="#">Изменить</a>
+              </div>
+              <div class="cart-order-result__item">
+                <div class="cart-order-result__item-title">
+                  <p class="cart-order-result__item-title-item1">
+                    Пункт выдачи
+                  </p>
+                  <p class="cart-order-result__item-title-item2">
+                    Стоимость доставки
+                  </p>
+                  <p class="cart-order-result__item-title-item3">5—6 февраля</p>
+                  <p class="cart-order-result__item-title-item4">7—8 февраля</p>
+                </div>
+                <div class="cart-order-result__item-info">
+                  <div class="cart-result__item-info-adress">
+                    <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                    <div class="cart-result__item-info-adress-info">
+                      <div class="cart-result__item-info-adress-rating">
+                        <img src="image/icon__star.svg" alt="рейтинг" />
+                        <span>4.99</span>
+                      </div>
+                      <span>Ежедневно с 10 до 21</span>
+                    </div>
+                  </div>
+                  <span>Бесплатно</span>
+                  <div class="cart-order-result__item-img">
+                    <a href="#"
+                      ><img
+                        src="image/product__t-shirt.jpg"
+                        alt="Футболка мужская"
+                    /></a>
+                    <a href="#"
+                      ><img
+                        src="image/product__phone-case.jpg"
+                        alt="Силиконовый чехол для телефона"
+                      /><span class="count">3</span></a
+                    >
+                    <a href="#"
+                      ><img
+                        src="image/product__colour-pencils.jpg"
+                        alt="Карандаши цветные"
+                      /><span class="count">3</span></a
+                    >
+                  </div>
+                  <div class="cart-order-result__item-img">
+                    <a href="#"
+                      ><img
+                        src="image/product__phone-case.jpg"
+                        alt="Силиконовый чехол для телефона"
+                      /><span class="count">3</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="cart-order__return-delivery-info result">
+                <img
+                  src="image/icon__mark.svg"
+                  alt="Информация о возврате товара"
+                />
+                <p>
+                  Обратная доставка товаров на склад при отказе —
+                  <a href="#">бесплатно</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-result-order">
+            <div class="cart-order-result">
+              <h4>Способ оплаты</h4>
+              <a href="#">Изменить</a>
+            </div>
+            <div class="cart-order-result-container">
+              <div class="cart-order-result__card">
+                <img src="image/icon__MIR-card.svg" alt="карта МИР" />
+                <p>1234 56•• •••• 1234</p>
+                <p>01/30</p>
+              </div>
+              <div class="cart-order-result__card-pay">
+                <p>Спишем оплату с карты при получении</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-result-order-container">
+            <div class="cart-result-order">
+              <div class="cart-order-result">
+                <h4>Получатель</h4>
+              </div>
+              <div class="cart-order__form">
+                <form class="form-box" action="#">
+                  <div class="form__box-items">
+                    <input class="form__item" type="text" placeholder="Имя" />
+                    <input
+                      class="form__item"
+                      type="text"
+                      placeholder="Фамилия"
+                    />
+                  </div>
+                  <div class="form__box-items">
+                    <input
+                      class="form__item"
+                      type="email"
+                      placeholder="Почта"
+                    />
+                    <input
+                      class="form__item"
+                      type="text"
+                      placeholder="+7 988 123-45-67"
+                    />
+                    <input
+                      class="form__item"
+                      id="inn"
+                      type="text"
+                      placeholder="ИНН"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cart-order-container">
         <div>
-          <div class="cart-order-sum">
+          <div class="cart-order-result">
             <p>Итого</p>
             <p>2 101 063 <span>сом</span></p>
           </div>
@@ -492,7 +616,6 @@
               <a href="#"><span>5–8 фев</span></a>
             </div>
           </div>
-
           <div class="cart-order__return-delivery-info">
             <img
               src="image/icon__mark.svg"
