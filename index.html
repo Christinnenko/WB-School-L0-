@@ -3,7 +3,555 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Корзина</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header-container">
+      <div class="header">
+        <div class="header-nav">
+          <button class="header-nav__burger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="24"
+              viewBox="0 0 28 24"
+              fill="none"
+            >
+              <path
+                d="M0 2C0 0.895431 0.895431 0 2 0H26C27.1046 0 28 0.895431 28 2C28 3.10457 27.1046 4 26 4H2C0.895431 4 0 3.10457 0 2Z"
+                fill="white"
+              />
+              <path
+                d="M0 12C0 10.8954 0.895431 10 2 10H26C27.1046 10 28 10.8954 28 12C28 13.1046 27.1046 14 26 14H2C0.895431 14 0 13.1046 0 12Z"
+                fill="white"
+              />
+              <path
+                d="M0 22C0 20.8954 0.895431 20 2 20H26C27.1046 20 28 20.8954 28 22C28 23.1046 27.1046 24 26 24H2C0.895431 24 0 23.1046 0 22Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <a href="#"
+            ><h1 class="header-nav__logo">
+              Товары<br />
+              и точка
+            </h1></a
+          >
+        </div>
+        <div class="header-search">
+          <input
+            class="header-search__input"
+            type="text"
+            placeholder="Я ищу..."
+          />
+          <button class="header-search__button">
+            <img src="image/header__search.svg" alt="Поиск товара" />
+          </button>
+        </div>
+        <nav class="header-navbar">
+          <a class="header-navbar__link" href="#"
+            ><img
+              class="header-navbar__profile-img"
+              src="image/header__profile.svg"
+              alt="Профиль"
+            />Профиль</a
+          >
+          <a class="header-navbar__link" href="#"
+            ><img
+              class="header-navbar__cart-img"
+              src="image/header__cart.svg"
+              alt="Корзина"
+            />Корзина
+            <div class="header-navbar__count">3</div></a
+          >
+        </nav>
+      </div>
+    </header>
+    <section class="cart-container">
+      <div class="cart">
+        <h2 class="cart__title">Корзина</h2>
+        <div class="cart__header">
+          <div>
+            <input class="checkbox" type="checkbox" id="selectAll" />
+            <label class="custom-checkbox" for="selectAll">Выбрать все</label>
+          </div>
+          <img src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
+        </div>
+        <div class="cart-product-container">
+          <div class="cart-product">
+            <div class="cart-product__left">
+              <div class="checkbox-container">
+                <input class="checkbox" type="checkbox" id="select1" />
+                <label class="custom-checkbox" for="select1"></label>
+                <a href="#"
+                  ><img src="image/product__t-shirt.jpg" alt="Футболка мужская"
+                /></a>
+              </div>
+              <div class="cart-product__options">
+                <p class="cart-product__name">Футболка UZcotton мужская</p>
+                <div class="cart-product__option">
+                  <p class="cart-product__color">Цвет: белый</p>
+                  <p class="cart-product__size">Размер: 56</p>
+                </div>
+                <p class="cart-product__warehouse">Коледино WB</p>
+                <div class="cart-product__seller-box">
+                  <p class="cart-product__seller">OOO Вайлдберриз</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                    <path
+                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cart-product__right">
+              <div class="cart-product-box">
+                <input
+                  class="cart-product__quantity-count"
+                  type="number"
+                  value="1"
+                  min="1"
+                />
+                <p class="cart-product__remaining">Осталось 2 шт.</p>
+                <div class="cart-product__actions">
+                  <img src="image/icon__like.svg" alt="Добавить в избранное" />
+                  <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                </div>
+              </div>
+              <div class="cart-product__price">
+                <p class="cart-product__final-price">522<span> сом</span></p>
+                <p class="cart-product__old-price">1051 сом</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-product">
+            <div class="cart-product__left">
+              <div class="checkbox-container">
+                <input class="checkbox" type="checkbox" id="select2" />
+                <label class="custom-checkbox" for="select2"></label>
+                <a href="#"
+                  ><img
+                    src="image/product__phone-case.jpg"
+                    alt="Силиконовый чехол для телефона"
+                /></a>
+              </div>
+              <div class="cart-product__options">
+                <p class="cart-product__name">
+                  Силиконовый чехол картхолдер (отверстия) для карт, прозрачный
+                  кейс бампер на Apple iPhone XR, MobiSafe
+                </p>
+                <div class="cart-product__option">
+                  <p class="cart-product__color">Цвет: прозрачный</p>
+                </div>
+                <p class="cart-product__warehouse">Коледино WB</p>
+                <div class="cart-product__seller-box">
+                  <p class="cart-product__seller">OOO Мегапрофстиль</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                    <path
+                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cart-product__right">
+              <div class="cart-product-box">
+                <input
+                  class="cart-product__quantity-count"
+                  type="number"
+                  value="1"
+                  min="1"
+                />
+                <div class="cart-product__actions">
+                  <img src="image/icon__like.svg" alt="Добавить в избранное" />
+                  <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                </div>
+              </div>
+              <div class="cart-product__price">
+                <p class="cart-product__final-price_small">
+                  2 100 047<span> сом</span>
+                </p>
+                <p class="cart-product__old-price">2 300 047 сом</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-product">
+            <div class="cart-product__left">
+              <div class="checkbox-container">
+                <input class="checkbox" type="checkbox" id="select3" />
+                <label class="custom-checkbox" for="select3"></label>
+                <a href="#"
+                  ><img
+                    src="image/product__colour-pencils.jpg"
+                    alt="Карандаши цветные"
+                /></a>
+              </div>
+              <div class="cart-product__options">
+                <p class="cart-product__name">
+                  Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                  заточенные, шестигранные,<br />
+                  Faber-Castell
+                </p>
+                <div class="cart-product__option"></div>
+                <p class="cart-product__warehouse">Коледино WB</p>
+                <div class="cart-product__seller-box">
+                  <p class="cart-product__seller">OOO Вайлдберриз</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                    <path
+                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                      fill="#9797AF"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="cart-product__right">
+              <div class="cart-product-box">
+                <input
+                  class="cart-product__quantity-count"
+                  type="number"
+                  value="1"
+                  min="1"
+                />
+                <p class="cart-product__remaining">Осталось 2 шт.</p>
+                <div class="cart-product__actions">
+                  <img src="image/icon__like.svg" alt="Добавить в избранное" />
+                  <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                </div>
+              </div>
+              <div class="cart-product__price">
+                <p class="cart-product__final-price">494<span> сом</span></p>
+                <p class="cart-product__old-price">950 сом</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-not-available">
+          <div class="cart__header">
+            <h4>Отсутствуют · 3 товара</h4>
+            <img src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
+          </div>
+          <div class="cart-product-container">
+            <div class="cart-product out-of-stock">
+              <div class="cart-product__left">
+                <div class="checkbox-container">
+                  <input class="checkbox" type="checkbox" id="select1" />
+                  <label
+                    class="custom-checkbox out-stock"
+                    for="select1"
+                  ></label>
+                  <a href="#"
+                    ><img
+                      src="image/product__t-shirt.jpg"
+                      alt="Футболка мужская"
+                  /></a>
+                </div>
+                <div class="cart-product__options">
+                  <p class="cart-product__name">Футболка UZcotton мужская</p>
+                  <div class="cart-product__option">
+                    <p class="cart-product__color">Цвет: белый</p>
+                    <p class="cart-product__size">Размер: 56</p>
+                  </div>
+                  <p class="cart-product__warehouse">Коледино WB</p>
+                  <div class="cart-product__seller-box">
+                    <p class="cart-product__seller">OOO Вайлдберриз</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                      <path
+                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                        fill="#9797AF"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-product__right">
+                <div class="cart-product-box">
+                  <input
+                    class="cart-product__quantity-count out-stock"
+                    type="number"
+                    value="1"
+                    min="1"
+                  />
+                  <p class="cart-product__remaining out-stock">
+                    Осталось 2 шт.
+                  </p>
+                  <div class="cart-product__actions">
+                    <img
+                      src="image/icon__like.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                  </div>
+                </div>
+                <div class="cart-product__price out-stock">
+                  <p class="cart-product__final-price">522<span> сом</span></p>
+                  <p class="cart-product__old-price">1051 сом</p>
+                </div>
+              </div>
+            </div>
+            <div class="cart-product out-of-stock">
+              <div class="cart-product__left">
+                <div class="checkbox-container">
+                  <input
+                    class="checkbox out-of-stock"
+                    type="checkbox"
+                    id="select2"
+                  />
+                  <label
+                    class="custom-checkbox out-stock"
+                    for="select2"
+                  ></label>
+                  <a href="#"
+                    ><img
+                      src="image/product__phone-case.jpg"
+                      alt="Силиконовый чехол для телефона"
+                  /></a>
+                </div>
+                <div class="cart-product__options">
+                  <p class="cart-product__name">
+                    Силиконовый чехол картхолдер (отверстия) для карт,
+                    прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                  </p>
+                  <div class="cart-product__option">
+                    <p class="cart-product__color">Цвет: прозрачный</p>
+                  </div>
+                  <p class="cart-product__warehouse">Коледино WB</p>
+                  <div class="cart-product__seller-box">
+                    <p class="cart-product__seller">OOO Мегапрофстиль</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                      <path
+                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                        fill="#9797AF"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-product__right">
+                <div class="cart-product-box">
+                  <input
+                    class="cart-product__quantity-count out-stock"
+                    type="number"
+                    value="1"
+                    min="1"
+                  />
+                  <div class="cart-product__actions">
+                    <img
+                      src="image/icon__like.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                  </div>
+                </div>
+                <div class="cart-product__price out-stock">
+                  <p class="cart-product__final-price_small">
+                    2 100 047<span> сом</span>
+                  </p>
+                  <p class="cart-product__old-price">2 300 047 сом</p>
+                </div>
+              </div>
+            </div>
+            <div class="cart-product out-of-stock">
+              <div class="cart-product__left">
+                <div class="checkbox-container">
+                  <input class="checkbox" type="checkbox" id="select3" />
+                  <label
+                    class="custom-checkbox out-stock"
+                    for="select3"
+                  ></label>
+                  <a href="#"
+                    ><img
+                      src="image/product__colour-pencils.jpg"
+                      alt="Карандаши цветные"
+                  /></a>
+                </div>
+                <div class="cart-product__options">
+                  <p class="cart-product__name">
+                    Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                    заточенные, шестигранные,<br />
+                    Faber-Castell
+                  </p>
+                  <div class="cart-product__option"></div>
+                  <p class="cart-product__warehouse">Коледино WB</p>
+                  <div class="cart-product__seller-box">
+                    <p class="cart-product__seller">OOO Вайлдберриз</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
+                      <path
+                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
+                        fill="#9797AF"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-product__right">
+                <div class="cart-product-box">
+                  <input
+                    class="cart-product__quantity-count out-stock"
+                    type="number"
+                    value="1"
+                    min="1"
+                  />
+                  <p class="cart-product__remaining out-stock">
+                    Осталось 2 шт.
+                  </p>
+                  <div class="cart-product__actions">
+                    <img
+                      src="image/icon__like.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img src="image/icon__cart.svg" alt="Убрать из корзины" />
+                  </div>
+                </div>
+                <div class="cart-product__price out-stock">
+                  <p class="cart-product__final-price">494<span> сом</span></p>
+                  <p class="cart-product__old-price">950 сом</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-order-container">
+        <div>
+          <div class="cart-order-sum">
+            <p>Итого</p>
+            <p>2 101 063 <span>сом</span></p>
+          </div>
+          <div class="cart-order">
+            <div class="cart-order__info">
+              <p>203 товара</p>
+              <p>2 302 048 сом</p>
+            </div>
+            <div class="cart-order__info">
+              <p>Скидка</p>
+              <p>-200 985 сом</p>
+            </div>
+            <div class="cart-order__info">
+              <p>Доставка</p>
+              <p>Бесплатно</p>
+            </div>
+          </div>
+        </div>
+        <div class="cart-order__delivery">
+          <div class="cart-order__delivery-info">
+            <div class="cart-order__delivery-header">
+              <h4>Доставка в пункт выдачи</h4>
+              <a href="#"
+                ><img
+                  src="image/icon__pencil.svg"
+                  alt="Редактировать адрес пункта выдачи"
+              /></a>
+            </div>
+            <div class="cart-order__delivery-address">
+              <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <a href="#"><span>5–8 фев</span></a>
+            </div>
+          </div>
+
+          <div class="cart-order__return-delivery-info">
+            <img
+              src="image/icon__mark.svg"
+              alt="Информация о возврате товара"
+            />
+            <p>
+              Обратная доставка товаров<br />
+              на склад при отказе —
+              <a href="#">бесплатно</a>
+            </p>
+          </div>
+        </div>
+        <div class="cart-order__payment-info">
+          <div class="cart-order__payment-header">
+            <h4>Оплата картой</h4>
+            <a href="#"
+              ><img src="image/icon__pencil.svg" alt="Сменить платежную карту"
+            /></a>
+          </div>
+          <div class="cart-order__card-info">
+            <img src="image/icon__MIR-card.svg" alt="карта МИР" />
+            <p>1234 12•• •••• 1234</p>
+          </div>
+          <div class="cart-order__card-pay-now">
+            <input class="checkbox" type="checkbox" id="select-pay-now" />
+            <label
+              class="custom-checkbox custom-checkbox-pay"
+              for="select-pay-now"
+              >Списать оплату сразу</label
+            >
+            <p>Спишем оплату с карты при получении</p>
+          </div>
+        </div>
+        <div class="cart-order__do-order">
+          <button>Заказать</button>
+          <div class="oferta-access">
+            <img
+              src="image/icon__mark-agree.svg"
+              alt="согласен с правилами пользования торговой площадкой и возврата"
+            />
+            <p>
+              Соглашаюсь
+              <a href="#"
+                >с правилами
+                <span class="custom-underline"
+                  >пользования торговой площадкой</span
+                ></a
+              >
+              <span class="custom-underline">и возврата</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-conteiner">
+      <div class="footer">
+        <p class="footer__text">© 2022 ООО «Товары и точка»</p>
+      </div>
+    </footer>
+  </body>
 </html>
