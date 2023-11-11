@@ -443,6 +443,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 590px;
 }
 
 .cart-result-order-container {
@@ -507,15 +508,11 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   line-height: 16px; /* 123.077% */
 }
 
-.cart-order__form {
-  display: flex;
-}
-
 .form-box {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin-top: 28px;
+  gap: 38px;
+  margin-top: 36px;
 }
 
 .form__box-items {
@@ -529,6 +526,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   line-height: 24px;
   border: none;
   border-bottom: 1px solid var(--rulers-rulers-input, rgba(0, 0, 0, 0.2));
+  width: 100%;
 }
 
 .cart-order-result-container {
