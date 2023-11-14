@@ -7,8 +7,7 @@
     <title>Корзина</title>
   </head>
   <body>
-    <header class="header-container">
-      <div class="header">
+      <header class="header">
         <div class="header-nav">
           <button class="header-nav__burger">
             <img src="image/header__burger.svg" alt="Навигация по сайту">
@@ -16,7 +15,7 @@
           </button>
           <a href="#"
             ><h1 class="header-nav__logo">
-              Товары<br />
+              <span>Товары</span><br />
               и точка
             </h1></a
           >
@@ -47,7 +46,6 @@
             />Корзина <span class="count">3</span></a
           >
         </nav>
-      </div>
     </header>
     <section class="cart-container">
       <div class="cart">
@@ -78,19 +76,7 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Вайлдберриз</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                    <path
-                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                      fill="#9797AF"
-                    />
-                  </svg>
+                  <img src="image/icon__information.svg" alt="Информация о продавце">
                 </div>
               </div>
             </div>
@@ -136,19 +122,7 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Мегапрофстиль</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                    <path
-                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                      fill="#9797AF"
-                    />
-                  </svg>
+                  <img src="image/icon__information.svg" alt="Информация о продавце">
                 </div>
               </div>
             </div>
@@ -165,8 +139,8 @@
                   <img src="image/icon__cart.svg" alt="Убрать из корзины" />
                 </div>
               </div>
-              <div class="cart-product__price">
-                <p class="cart-product__final-price_small">
+              <div class="cart-product__price-small">
+                <p class="cart-product__final-price-small">
                   2 100 047<span> сом</span>
                 </p>
                 <p class="cart-product__old-price">2 300 047 сом</p>
@@ -194,19 +168,7 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Вайлдберриз</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                    <path
-                      d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                      fill="#9797AF"
-                    />
-                  </svg>
+                  <img src="image/icon__information.svg" alt="Информация о продавце">
                 </div>
               </div>
             </div>
@@ -260,19 +222,7 @@
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
                     <p class="cart-product__seller">OOO Вайлдберриз</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                      <path
-                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                        fill="#9797AF"
-                      />
-                    </svg>
+                    <img src="image/icon__information.svg" alt="Информация о продавце">
                   </div>
                 </div>
               </div>
@@ -330,19 +280,7 @@
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
                     <p class="cart-product__seller">OOO Мегапрофстиль</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                      <path
-                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                        fill="#9797AF"
-                      />
-                    </svg>
+                    <img src="image/icon__information.svg" alt="Информация о продавце">
                   </div>
                 </div>
               </div>
@@ -363,7 +301,7 @@
                   </div>
                 </div>
                 <div class="cart-product__price out-stock">
-                  <p class="cart-product__final-price_small">
+                  <p class="cart-product__final-price-small">
                     2 100 047<span> сом</span>
                   </p>
                   <p class="cart-product__old-price">2 300 047 сом</p>
@@ -393,19 +331,7 @@
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
                     <p class="cart-product__seller">OOO Вайлдберриз</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <circle cx="10" cy="10" r="7.5" stroke="#9797AF" />
-                      <path
-                        d="M9.88867 7.58691C9.62826 7.58691 9.41504 7.51042 9.24902 7.35742C9.08301 7.20117 9 7.01074 9 6.78613C9 6.55501 9.08301 6.36621 9.24902 6.21973C9.41504 6.07324 9.62826 6 9.88867 6C10.1523 6 10.3656 6.07324 10.5283 6.21973C10.6943 6.36621 10.7773 6.55501 10.7773 6.78613C10.7773 7.02051 10.6943 7.21257 10.5283 7.3623C10.3656 7.51204 10.1523 7.58691 9.88867 7.58691ZM10.6504 13.3779H9.10742V8.37793H10.6504V13.3779Z"
-                        fill="#9797AF"
-                      />
-                    </svg>
+                    <img src="image/icon__information.svg" alt="Информация о продавце">
                   </div>
                 </div>
               </div>
@@ -443,22 +369,22 @@
                 <h4>Способ доставки</h4>
                 <a href="#">Изменить</a>
               </div>
-              <div class="cart-order-result__item">
-                <div class="cart-order-result__item-title">
-                  <p class="cart-order-result__item-title-item1">
+              <div class="cart-result-order__item">
+                <div class="cart-result-order__item-title">
+                  <p class="cart-result-order__item-title-item1">
                     Пункт выдачи
                   </p>
-                  <p class="cart-order-result__item-title-item2">
+                  <p class="cart-result-order__item-title-item2">
                     Стоимость доставки
                   </p>
-                  <p class="cart-order-result__item-title-item3">5—6 февраля</p>
-                  <p class="cart-order-result__item-title-item4">7—8 февраля</p>
+                  <p class="cart-result-order__item-title-item3">5—6 февраля</p>
+                  <p class="cart-result-order__item-title-item4">7—8 февраля</p>
                 </div>
-                <div class="cart-order-result__item-info">
-                  <div class="cart-result__item-info-adress">
+                <div class="cart-result-order__item-info">
+                  <div>
                     <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
-                    <div class="cart-result__item-info-adress-info">
-                      <div class="cart-result__item-info-adress-rating">
+                    <div class="cart-result-order__item-info-adress">
+                      <div>
                         <img src="image/icon__star.svg" alt="рейтинг" />
                         <span>4.99</span>
                       </div>
@@ -466,7 +392,7 @@
                     </div>
                   </div>
                   <span>Бесплатно</span>
-                  <div class="cart-order-result__item-img">
+                  <div class="cart-result-order__item-img">
                     <a href="#"
                       ><img
                         src="image/product__t-shirt.jpg"
@@ -485,7 +411,7 @@
                       /><span class="count">3</span></a
                     >
                   </div>
-                  <div class="cart-order-result__item-img">
+                  <div class="cart-result-order__item-img">
                     <a href="#"
                       ><img
                         src="image/product__phone-case.jpg"
@@ -495,7 +421,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cart-order__return-delivery-info result">
+              <div class="return return-info">
                 <img
                   src="image/icon__mark.svg"
                   alt="Информация о возврате товара"
@@ -607,7 +533,7 @@
               <a href="#"><span>5–8 фев</span></a>
             </div>
           </div>
-          <div class="cart-order__return-delivery-info">
+          <div class="return">
             <img
               src="image/icon__mark.svg"
               alt="Информация о возврате товара"
