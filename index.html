@@ -7,45 +7,44 @@
     <title>Корзина</title>
   </head>
   <body>
-      <header class="header">
-        <div class="header-nav">
-          <button class="header-nav__burger">
-            <img src="image/header__burger.svg" alt="Навигация по сайту">
-            </svg>
-          </button>
-          <a href="#"
-            ><h1 class="header-nav__logo">
-              <span>Товары</span><br />
-              и точка
-            </h1></a
-          >
-        </div>
-        <div class="header-search">
-          <input
-            class="header-search__input"
-            type="text"
-            placeholder="Я ищу..."
-          />
-          <button class="header-search__button">
-            <img src="image/header__search.svg" alt="Поиск товара" />
-          </button>
-        </div>
-        <nav class="header-navbar">
-          <a class="header-navbar__link" href="#"
-            ><img
-              class="header-navbar__profile-img"
-              src="image/header__profile.svg"
-              alt="Профиль"
-            />Профиль</a
-          >
-          <a class="header-navbar__link" href="#"
-            ><img
-              class="header-navbar__cart-img"
-              src="image/header__cart.svg"
-              alt="Корзина"
-            />Корзина <span class="count">3</span></a
-          >
-        </nav>
+    <header class="header">
+      <div class="header-nav">
+        <button class="header-nav__burger">
+          <img src="image/header__burger.svg" alt="Навигация по сайту" />
+        </button>
+        <a href="#"
+          ><h1 class="header-nav__logo">
+            <span>Товары</span><br />
+            и точка
+          </h1></a
+        >
+      </div>
+      <div class="header-search">
+        <input
+          class="header-search__input"
+          type="text"
+          placeholder="Я ищу..."
+        />
+        <button class="header-search__button">
+          <img src="image/header__search.svg" alt="Поиск товара" />
+        </button>
+      </div>
+      <nav class="header-navbar">
+        <a class="header-navbar__link" href="#"
+          ><img
+            class="header-navbar__profile-img"
+            src="image/header__profile.svg"
+            alt="Профиль"
+          />Профиль</a
+        >
+        <a class="header-navbar__link" href="#"
+          ><img
+            class="header-navbar__cart-img"
+            src="image/header__cart.svg"
+            alt="Корзина"
+          />Корзина <span class="count">3</span></a
+        >
+      </nav>
     </header>
     <section class="cart-container">
       <div class="cart">
@@ -76,7 +75,10 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Вайлдберриз</p>
-                  <img src="image/icon__information.svg" alt="Информация о продавце">
+                  <img
+                    src="image/icon__information.svg"
+                    alt="Информация о продавце"
+                  />
                 </div>
               </div>
             </div>
@@ -122,7 +124,10 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Мегапрофстиль</p>
-                  <img src="image/icon__information.svg" alt="Информация о продавце">
+                  <img
+                    src="image/icon__information.svg"
+                    alt="Информация о продавце"
+                  />
                 </div>
               </div>
             </div>
@@ -168,7 +173,10 @@
                 <p class="cart-product__warehouse">Коледино WB</p>
                 <div class="cart-product__seller-box">
                   <p class="cart-product__seller">OOO Вайлдберриз</p>
-                  <img src="image/icon__information.svg" alt="Информация о продавце">
+                  <img
+                    src="image/icon__information.svg"
+                    alt="Информация о продавце"
+                  />
                 </div>
               </div>
             </div>
@@ -195,17 +203,21 @@
         </div>
         <div class="cart-not-available">
           <div class="cart__header">
-            <h4>Отсутствуют · 3 товара</h4>
+            <h3>Отсутствуют · 3 товара</h3>
             <img src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
           </div>
           <div class="cart-product-container">
             <div class="cart-product out-of-stock">
               <div class="cart-product__left">
                 <div class="checkbox-container">
-                  <input class="checkbox" type="checkbox" id="select4" />
+                  <input
+                    class="checkbox out-of-stock"
+                    type="checkbox"
+                    id="select5"
+                  />
                   <label
                     class="custom-checkbox out-stock"
-                    for="select4"
+                    for="select5"
                   ></label>
                   <a href="#"
                     ><img
@@ -221,12 +233,15 @@
                   </div>
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
-                    <p class="cart-product__seller">OOO Вайлдберриз</p>
-                    <img src="image/icon__information.svg" alt="Информация о продавце">
+                    <p class="cart-product__seller">OOO Мегапрофстиль</p>
+                    <img
+                      src="image/icon__information.svg"
+                      alt="Информация о продавце"
+                    />
                   </div>
                 </div>
               </div>
-              <div class="cart-product__right out-of-stock">
+              <div class="cart-product__right">
                 <div class="cart-product-box">
                   <input
                     class="cart-product__quantity-count out-stock"
@@ -234,9 +249,6 @@
                     value="1"
                     min="1"
                   />
-                  <p class="cart-product__remaining out-stock">
-                    Осталось 2 шт.
-                  </p>
                   <div class="cart-product__actions">
                     <img
                       src="image/icon__like.svg"
@@ -246,8 +258,10 @@
                   </div>
                 </div>
                 <div class="cart-product__price out-stock">
-                  <p class="cart-product__final-price">522<span> сом</span></p>
-                  <p class="cart-product__old-price">1051 сом</p>
+                  <p class="cart-product__final-price-small">
+                    2 100 047<span> сом</span>
+                  </p>
+                  <p class="cart-product__old-price">2 300 047 сом</p>
                 </div>
               </div>
             </div>
@@ -280,7 +294,10 @@
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
                     <p class="cart-product__seller">OOO Мегапрофстиль</p>
-                    <img src="image/icon__information.svg" alt="Информация о продавце">
+                    <img
+                      src="image/icon__information.svg"
+                      alt="Информация о продавце"
+                    />
                   </div>
                 </div>
               </div>
@@ -331,7 +348,10 @@
                   <p class="cart-product__warehouse out-stock">Коледино WB</p>
                   <div class="cart-product__seller-box out-stock">
                     <p class="cart-product__seller">OOO Вайлдберриз</p>
-                    <img src="image/icon__information.svg" alt="Информация о продавце">
+                    <img
+                      src="image/icon__information.svg"
+                      alt="Информация о продавце"
+                    />
                   </div>
                 </div>
               </div>
@@ -365,7 +385,7 @@
         <div class="cart-result-order-container-items">
           <div class="cart-result-order-container">
             <div class="cart-result-order">
-              <div class="cart-order-result">
+              <div class="cart-result">
                 <h4>Способ доставки</h4>
                 <a href="#">Изменить</a>
               </div>
@@ -434,76 +454,82 @@
             </div>
           </div>
           <div class="cart-result-order">
-            <div class="cart-order-result">
+            <div class="cart-result">
               <h4>Способ оплаты</h4>
               <a href="#">Изменить</a>
             </div>
             <div class="cart-order-result-container">
-              <div class="cart-order-result__card">
+              <div class="cart-order-result-card">
                 <img src="image/icon__MIR-card.svg" alt="карта МИР" />
                 <p>1234 56•• •••• 1234</p>
                 <p>01/30</p>
               </div>
-              <div class="cart-order-result__card-pay">
+              <div class="cart-order-result-card-pay">
                 <p>Спишем оплату с карты при получении</p>
               </div>
             </div>
           </div>
           <div class="cart-result-order-container">
             <div class="cart-result-order">
-              <div class="cart-order-result">
-                <h4>Получатель</h4>
-              </div>
-              <div class="cart-order__form">
-                <form class="form-box" action="#">
-                  <div class="form__box-items">
-                    <input class="form__item" type="text" placeholder="Имя" />
-                    <input
-                      class="form__item"
-                      type="text"
-                      placeholder="Фамилия"
-                    />
-                  </div>
-                  <div class="form__box-items">
-                    <input
-                      class="form__item"
-                      type="email"
-                      placeholder="Почта"
-                    />
-                    <div class="form__phone-container">
-                      <label for="phone" class="form__label"
-                        >Телефон
-                        <input
-                          class="form__item"
-                          type="text"
-                          id="phone"
-                          placeholder="+7 988 123-45-67"
-                      /></label>
-                    </div>
-                    <div class="form__inn-container">
+              <div class="cart-result-order-box">
+                <div class="cart-result">
+                  <h4>Получатель</h4>
+                </div>
+                <div>
+                  <form class="form-box" action="#">
+                    <div class="form-box__items">
                       <input
-                        class="form__item"
-                        id="inn"
+                        class="form-box__item"
                         type="text"
-                        placeholder="ИНН"
-                      /><label for="inn" class="form__label_inn"
-                        >Для таможенного оформления</label
-                      >
+                        placeholder="Имя"
+                      />
+                      <input
+                        class="form-box__item"
+                        type="text"
+                        placeholder="Фамилия"
+                      />
                     </div>
-                  </div>
-                </form>
+                    <div class="form-box__items">
+                      <input
+                        class="form-box__item"
+                        type="email"
+                        placeholder="Почта"
+                      />
+                      <div class="form-box__phone-container">
+                        <label for="phone" class="form-box__label"
+                          >Телефон
+                          <input
+                            class="form-box__item"
+                            type="text"
+                            id="phone"
+                            placeholder="+7 988 123-45-67"
+                        /></label>
+                      </div>
+                      <div class="form-box__inn-container">
+                        <input
+                          class="form-box__item"
+                          id="inn"
+                          type="text"
+                          placeholder="ИНН"
+                        /><label for="inn" class="form-box__label-inn"
+                          >Для таможенного оформления</label
+                        >
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cart-order-container">
+      <div class="cart-order">
         <div>
-          <div class="cart-order-result">
+          <div class="cart-result">
             <p>Итого</p>
             <p>2 101 063 <span>сом</span></p>
           </div>
-          <div class="cart-order">
+          <div class="cart-order-container">
             <div class="cart-order__info">
               <p>203 товара</p>
               <p>2 302 048 сом</p>
@@ -539,20 +565,19 @@
               alt="Информация о возврате товара"
             />
             <p>
-              Обратная доставка товаров<br />
-              на склад при отказе —
+              <span>Обратная доставка товаров</span>на склад при отказе —
               <a href="#">бесплатно</a>
             </p>
           </div>
         </div>
-        <div class="cart-order__payment-info">
+        <div class="cart-order__payment">
           <div class="cart-order__payment-header">
             <h4>Оплата картой</h4>
             <a href="#"
               ><img src="image/icon__pencil.svg" alt="Сменить платежную карту"
             /></a>
           </div>
-          <div class="cart-order__card-info">
+          <div class="cart-order__payment-card-info">
             <img src="image/icon__MIR-card.svg" alt="карта МИР" />
             <p>1234 12•• •••• 1234</p>
           </div>
