@@ -37,7 +37,10 @@ input:focus {
 }
 
 .header-search__button-mob,
-.cart-product__price-mob {
+.cart-product__price-mob,
+.cart-product__remaining_hidden,
+.out-stock,
+.nav-mob {
   display: none;
 }
 
@@ -371,10 +374,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   color: #ff3b30;
   font-size: 13px;
   line-height: 16px;
-}
-
-.cart-product__remaining_hidden {
-  display: none;
 }
 
 .cart-product__price {
@@ -800,10 +799,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   margin-right: 43px;
 }
 
-.out-stock {
-  display: none;
-}
-
 .footer__text {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
@@ -811,10 +806,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   line-height: 18px;
   margin: 24px;
   letter-spacing: 0.2px;
-}
-
-.nav-mob {
-  display: none;
 }
 
 @media (min-width: 1025px) {
@@ -836,12 +827,16 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 }
 
 @media (max-width: 1023px) {
-  .out-stock {
-    display: none;
-  }
-
+  .out-stock,
   .header-search,
-  .header-navbar {
+  .header-navbar,
+  .cart-product__price,
+  .cart-product__size,
+  .cart-product__seller-box,
+  .cart-product__price-small,
+  .cart-order__delivery-info,
+  .cart-order__payment-header,
+  .cart-order__payment-card-info {
     display: none;
   }
 
@@ -933,10 +928,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     display: block;
   }
 
-  .cart-product__price {
-    display: none;
-  }
-
   .cart-product__price-mob {
     display: flex;
     gap: 5px;
@@ -983,12 +974,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     max-width: 203.38px;
   }
 
-  .cart-product__size,
-  .cart-product__seller-box,
-  .cart-product__price-small {
-    display: none;
-  }
-
   .cart-product__color {
     margin-top: 4px;
     margin-bottom: 6px;
@@ -1021,8 +1006,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     position: absolute;
     top: 3px;
     left: 2px;
-    z-index: 1; /* Чтобы чекбокс был поверх картинки */
-    /* Дополнительные стили для чекбокса */
+    z-index: 1;
   }
 
   .cart-product__remaining {
@@ -1141,12 +1125,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     margin-bottom: 0px;
   }
 
-  .cart-order__delivery-info,
-  .cart-order__payment-header,
-  .cart-order__payment-card-info {
-    display: none;
-  }
-
   .form-box__phone-container {
     margin-top: -22px;
     margin-bottom: -20px;
@@ -1158,10 +1136,6 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 
   .cart-order__do-order {
     gap: 10px;
-  }
-
-  .out-stock {
-    display: none;
   }
 
   .cart-product__remaining_hidden {
