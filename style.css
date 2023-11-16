@@ -36,7 +36,7 @@ input:focus {
   outline: none;
 }
 
-.header-search__button-mob,
+.header-button-mob,
 .cart-product__price-mob,
 .cart-product__remaining_hidden,
 .out-stock,
@@ -67,14 +67,9 @@ input:focus {
   width: 28px;
   height: 24px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
-.header-nav__burger:hover {
-  border: 1px solid var(--system-white, #fff);
-}
-
-.header-nav__logo {
+.header-logo {
   width: 108px;
   font-size: 30px;
   line-height: 23.8px;
@@ -83,7 +78,7 @@ input:focus {
   letter-spacing: 2px;
 }
 
-.header-nav__logo span {
+.header-logo span {
   letter-spacing: 1.7px;
   margin-left: -1.2px;
 }
@@ -290,8 +285,13 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   margin-right: 17px;
 }
 
-.cart-product__actions img {
+.cart-product__actions svg {
   margin-right: 0;
+  transition: all 0.3s;
+}
+
+.cart-product__actions a:hover svg path {
+  fill: #f55123;
 }
 
 .cart-product__name,
@@ -742,14 +742,13 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   background: var(--system-magenta, #cb11ab);
   display: flex;
   height: 45px;
-
   justify-content: center;
   align-items: center;
   border: none;
   color: var(--system-white, #fff);
-
   font-size: 15px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .cart-order__do-order {
@@ -853,7 +852,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     border: none;
   }
 
-  .header-nav__logo {
+  .header-logo {
     font-size: 26px;
     line-height: 24px;
     letter-spacing: 2.7px;
@@ -861,17 +860,18 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     width: 100%;
   }
 
-  .header-nav__logo span {
+  .header-logo span {
     letter-spacing: 2.9px;
     margin-left: -11.2px;
   }
 
-  .header-search__button-mob {
+  .header-button-mob {
     display: block;
     width: 28px;
     height: 28px;
     background: inherit;
     margin-top: 4px;
+    cursor: pointer;
   }
 
   .cart {
