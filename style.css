@@ -39,8 +39,11 @@ input:focus {
 .header-button-mob,
 .cart-product__price-mob,
 .cart-product__remaining_hidden,
-.out-stock,
 .nav-mob {
+  display: none;
+}
+
+.out-stock {
   display: none !important;
 }
 
