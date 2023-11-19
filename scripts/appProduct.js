@@ -1,18 +1,19 @@
-export function renderAppProduct() {
-  document.addEventListener("DOMContentLoaded", function () {
-    let appProduct = document.getElementById("appProduct");
+import { hideProduct } from "./hideProduct.js";
 
-    let htmlProduct = `
-    <div class="cart__header">
+export function renderAppProduct() {
+  let appProduct = document.getElementById("appProduct");
+
+  let htmlProduct = `
+    <div class="cart__header" id="productContainer1">
     <div>
       <input class="checkbox" type="checkbox" id="selectAll" />
       <label class="custom-checkbox" for="selectAll"
         >Выбрать все</label
       >
     </div>
-    <img src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
+    <img id="hiddenProduct1" src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
   </div>
-  <div class="cart-product-container">
+  <div id="product1" class="cart-product-container">
     <div class="cart-product">
       <div class="cart-product__left">
         <div class="checkbox-container">
@@ -308,7 +309,8 @@ export function renderAppProduct() {
   </div>
   `;
 
-    // Вставляем HTML-разметку в контейнер
-    appProduct.innerHTML = htmlProduct;
-  });
+  // Вставляем HTML-разметку в контейнер
+  appProduct.innerHTML = htmlProduct;
+
+  hideProduct("hiddenProduct1", "product1", "productContainer1");
 }

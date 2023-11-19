@@ -1,8 +1,7 @@
 export function renderAppDelivery() {
-  document.addEventListener("DOMContentLoaded", function () {
-    let appDelivery = document.getElementById("appDelivery");
+  let appDelivery = document.getElementById("appDelivery");
 
-    let htmlDelivery = `
+  let htmlDelivery = `
     <div class="cart-result">
     <h4>Способ доставки</h4>
     <a href="#">Изменить</a>
@@ -86,7 +85,6 @@ export function renderAppDelivery() {
     </p>
   </div>`;
 
-    // Вставляем HTML-разметку в контейнер
-    appDelivery.innerHTML = htmlDelivery;
-  });
+  // Вставляем HTML-разметку в контейнер
+  appDelivery.innerHTML = htmlDelivery;
 }

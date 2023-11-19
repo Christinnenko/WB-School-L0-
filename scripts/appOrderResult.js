@@ -1,8 +1,9 @@
-export function renderAppOrderResult() {
-  document.addEventListener("DOMContentLoaded", function () {
-    let appOrderResult = document.getElementById("appOrderResult");
+import { openPopupPay } from "./openPopup.js";
 
-    let htmlOrderResult = `
+export function renderAppOrderResult() {
+  let appOrderResult = document.getElementById("appOrderResult");
+
+  let htmlOrderResult = `
     <div>
     <div class="cart-result">
       <p>Итого</p>
@@ -52,7 +53,7 @@ export function renderAppOrderResult() {
   <div class="cart-order__payment">
     <div class="cart-order__payment-header">
       <h4>Оплата картой</h4>
-      <a href="#"
+      <a class="popup-link" href="#"
         ><img src="image/icon__pencil.svg" alt="Сменить платежную карту"
       /></a>
     </div>
@@ -71,7 +72,7 @@ export function renderAppOrderResult() {
     </div>
   </div>
   <div class="cart-order__do-order">
-    <button>Заказать</button>
+    <button id="orderButton">Заказать</button>
     <div class="oferta-access">
       <img
         src="image/icon__mark-agree.svg"
@@ -86,7 +87,8 @@ export function renderAppOrderResult() {
   </div>
       `;
 
-    // Вставляем HTML-разметку в контейнер
-    appOrderResult.innerHTML = htmlOrderResult;
-  });
+  // Вставляем HTML-разметку в контейнер
+  appOrderResult.innerHTML = htmlOrderResult;
+
+  openPopupPay();
 }

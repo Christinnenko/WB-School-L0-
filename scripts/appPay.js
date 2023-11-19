@@ -1,11 +1,12 @@
-export function renderAppPay() {
-  document.addEventListener("DOMContentLoaded", function () {
-    let appPay = document.getElementById("appPay");
+import { openPopupPay } from "./openPopup.js";
 
-    let htmlPay = `
+export function renderAppPay() {
+  let appPay = document.getElementById("appPay");
+
+  let htmlPay = `
     <div class="cart-result">
     <h4>Способ оплаты</h4>
-    <a href="#">Изменить</a>
+    <a class="popup-link" href="#">Изменить</a>
   </div>
   <div class="cart-order-result-container">
     <div class="cart-order-result-card">
@@ -19,7 +20,8 @@ export function renderAppPay() {
   </div>
       `;
 
-    // Вставляем HTML-разметку в контейнер
-    appPay.innerHTML = htmlPay;
-  });
+  // Вставляем HTML-разметку в контейнер
+  appPay.innerHTML = htmlPay;
+
+  openPopupPay();
 }
