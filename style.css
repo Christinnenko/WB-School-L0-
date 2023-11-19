@@ -852,7 +852,8 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   color: var(--system-orange, #f55123);
 }
 
-.popup-pay__container {
+.popup-pay__container,
+.popup-delivery__container {
   display: none;
   position: fixed;
   width: 100%;
@@ -862,7 +863,8 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   left: 0;
 }
 
-.popup-pay {
+.popup-pay,
+.popup-delivery {
   width: 400px;
   position: fixed;
   left: 50%;
@@ -873,17 +875,56 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.popup-pay__header {
+.popup-delivery {
+  width: 500px;
+}
+
+.popup-pay__header,
+.popup-delivery__header {
   display: flex;
   justify-content: space-between;
   margin: 16px 24px 13px 24px;
 }
 
-.popup-pay__title {
+.popup-pay__title,
+.popup-delivery__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.2px;
+}
+
+.popup-delivery__list-title {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 0 22px 12px 22px;
+}
+
+.popup-delivery__list-pick-up-point,
+.popup-delivery__list-courier {
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 22px 57px 22px;
+}
+
+.popup-delivery__list-pick-up-point {
+  display: none;
+}
+.popup-delivery__list-courier {
+  display: flex;
+}
+
+.popup-delivery__list-adress {
+  margin-top: -7px;
+  width: 100%;
+}
+
+.popup-delivery__list-pick-up-point label,
+.popup-delivery__list-courier label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .popup-pay__list {
@@ -892,9 +933,44 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   flex-direction: column;
 }
 
-.popup-pay__list label {
+.popup-delivery__list-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popup-pay__list label,
+.popup-delivery__list label {
   display: flex;
   gap: 4px;
+}
+
+.popup-delivery__choice {
+  display: flex;
+}
+
+.popup-delivery__choice button {
+  border-radius: 20px;
+  background: var(--text-white, #fff);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  width: 100%;
+  padding: 9px 0 9px 0;
+}
+
+.popup-delivery__choice-not-active {
+  border: 2px solid rgba(203, 17, 171, 0.15);
+}
+
+.popup-delivery__choice-active {
+  border: 2px solid var(--light-system-magenta, #cb11ab);
+}
+
+.popup-delivery__choice {
+  display: flex;
+  margin: 0 22px 22px 24px;
+  gap: 8px;
 }
 
 .popup-pay__list input {
@@ -906,13 +982,10 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   background: var(--background-smoky, #f6f6fa);
 }
 
-.popup-pay button {
+.popup__button {
   border-radius: 8px;
   background: var(--system-magenta, #cb11ab);
-  display: flex;
   height: 45px;
-  justify-content: center;
-  align-items: center;
   border: none;
   color: var(--system-white, #fff);
   font-size: 16px;
@@ -1334,7 +1407,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     margin-right: 8px;
   }
 
-  .popup-pay button {
+  .popup__button {
     height: 44px;
     width: 288px;
     padding: 0 48px 0 48px;

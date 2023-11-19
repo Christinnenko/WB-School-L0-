@@ -1,4 +1,4 @@
-import { closePopupPay } from "./openPopup.js";
+import { closePopup } from "./openPopup.js";
 
 export function renderAppPopupPay() {
   let appPopupPay = document.getElementById("appPopupPay");
@@ -8,7 +8,7 @@ export function renderAppPopupPay() {
   <div class="popup-pay__content">
     <div class="popup-pay__header">
       <h2 class="popup-pay__title">Способ оплаты</h2>
-      <a class="popup-pay__close" href="#"
+      <a class="popup__close" href="#"
         ><img
           src="image/icon__close.svg"
           alt="Закрыть окно способ оплаты"
@@ -54,12 +54,12 @@ export function renderAppPopupPay() {
       </label>
     </form>
   </div>
-  <button class="popup-pay__button">Выбрать</button>
+  <button class="popup__button">Выбрать</button>
 </div>
   `;
 
   // Вставляем HTML-разметку в контейнер
   appPopupPay.innerHTML = htmlPopupPay;
 
-  closePopupPay();
+  closePopup();
 }

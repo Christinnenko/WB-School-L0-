@@ -1,4 +1,4 @@
-import { openPopupPay } from "./openPopup.js";
+import { openPopup } from "./openPopup.js";
 
 export function renderAppOrderResult() {
   let appOrderResult = document.getElementById("appOrderResult");
@@ -28,10 +28,10 @@ export function renderAppOrderResult() {
     <div class="cart-order__delivery-info">
       <div class="cart-order__delivery-header">
         <h4>Доставка в пункт выдачи</h4>
-        <a href="#"
+        <a class="popup-link" data-popup="popup-delivery" href="#"
           ><img
             src="image/icon__pencil.svg"
-            alt="Редактировать адрес пункта выдачи"
+            alt="Изменить адрес пункта выдачи"
         /></a>
       </div>
       <div class="cart-order__delivery-address">
@@ -53,7 +53,7 @@ export function renderAppOrderResult() {
   <div class="cart-order__payment">
     <div class="cart-order__payment-header">
       <h4>Оплата картой</h4>
-      <a class="popup-link" href="#"
+      <a class="popup-link" data-popup="popup-pay" href="#"
         ><img src="image/icon__pencil.svg" alt="Сменить платежную карту"
       /></a>
     </div>
@@ -90,5 +90,5 @@ export function renderAppOrderResult() {
   // Вставляем HTML-разметку в контейнер
   appOrderResult.innerHTML = htmlOrderResult;
 
-  openPopupPay();
+  openPopup();
 }

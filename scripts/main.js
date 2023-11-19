@@ -7,6 +7,7 @@ import { renderAppPay } from "./appPay.js";
 import { renderAppProduct } from "./appProduct.js";
 import { renderAppProductOut } from "./appProductOut.js";
 import { renderAppPopupPay } from "./appPopupPay.js";
+import { renderAppPopupDelivery } from "./appPopupDelivery.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   renderAppProduct();
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
   renderAppOrderResult();
   renderAppForm();
   renderAppPopupPay();
+  renderAppPopupDelivery();
 });

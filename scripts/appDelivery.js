@@ -4,7 +4,7 @@ export function renderAppDelivery() {
   let htmlDelivery = `
     <div class="cart-result">
     <h4>Способ доставки</h4>
-    <a href="#">Изменить</a>
+    <a class="popup-link" data-popup="popup-delivery" href="#">Изменить</a>
   </div>
   <div class="cart-result-order__item">
     <div class="cart-result-order__item-info">

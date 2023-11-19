@@ -1,4 +1,4 @@
-import { openPopupPay } from "./openPopup.js";
+import { openPopup } from "./openPopup.js";
 
 export function renderAppPay() {
   let appPay = document.getElementById("appPay");
@@ -6,7 +6,7 @@ export function renderAppPay() {
   let htmlPay = `
     <div class="cart-result">
     <h4>Способ оплаты</h4>
-    <a class="popup-link" href="#">Изменить</a>
+    <a class="popup-link" data-popup="popup-pay" href="#">Изменить</a>
   </div>
   <div class="cart-order-result-container">
     <div class="cart-order-result-card">
@@ -23,5 +23,5 @@ export function renderAppPay() {
   // Вставляем HTML-разметку в контейнер
   appPay.innerHTML = htmlPay;
 
-  openPopupPay();
+  openPopup();
 }
