@@ -1,19 +1,28 @@
 // Функция для скрытия/показа продуктов
-export function hideProduct(buttonId, productId, containerId) {
-  let isShowProduct = false;
+
+export function hideProducts(buttonId, containerId) {
+  let isShowProducts = false;
   const hideButton = document.getElementById(buttonId);
-  const product = document.getElementById(productId);
   const productContainer = document.getElementById(containerId);
+  const borderElements = document.querySelectorAll(".cart__header");
 
-  hideButton.onclick = () => {
-    isShowProduct = !isShowProduct;
-    product.style.display = isShowProduct ? "none" : "block";
-    productContainer.style.borderBottom = isShowProduct
-      ? "none"
-      : "1px solid var(--rulers-rulers, rgba(0, 0, 0, 0.1))";
+  if (!hideButton || !productContainer) {
+    console.error(`Button or container not found.`);
+    return;
+  }
 
-    hideButton.src = isShowProduct
+  hideButton.addEventListener("click", () => {
+    isShowProducts = !isShowProducts;
+
+    productContainer.style.display = isShowProducts ? "none" : "block";
+    borderElements.forEach((borderElement) => {
+      borderElement.style.borderBottom = isShowProducts
+        ? "none"
+        : "1px solid var(--rulers-rulers, rgba(0, 0, 0, 0.1))";
+    });
+
+    hideButton.src = isShowProducts
       ? "image/icon__arrow_return_over.svg"
       : "image/icon__arrow.svg";
-  };
+  });
 }

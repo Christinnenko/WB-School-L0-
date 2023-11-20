@@ -1,15 +1,15 @@
 //Рендер продуктов не в наличии
 
-import { hideProduct } from "./hideProduct.js";
+import { hideProducts } from "./hideProduct.js";
 
 export function renderAppProductOut() {
   let appProductOut = document.getElementById("appProductOut");
 
-  let htmlProductOut = `<div class="cart__header" id="productContainer2">
+  let htmlProductOut = `<div class="cart__header" id="userProduct">
     <h3>Отсутствуют · 3 товара</h3>
-    <img id="hiddenProduct2" src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
+    <img id="hiddeProductOut" src="image/icon__arrow.svg" alt="Свернуть/развернуть" />
   </div>
-  <div id="product2" class="cart-product-container">
+  <div id="product-conteiner" class="cart-product-container">
     <div class="cart-product out-of-stock">
       <div class="cart-product__left">
         <div class="checkbox-container">
@@ -319,5 +319,5 @@ export function renderAppProductOut() {
 
   appProductOut.innerHTML = htmlProductOut;
 
-  hideProduct("hiddenProduct2", "product2", "productContainer2");
+  hideProducts("hiddeProductOut", "product-conteiner");
 }

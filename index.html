@@ -51,6 +51,17 @@
       <div class="cart">
         <div class="cart-center">
           <h2 class="cart__title">Корзина</h2>
+          <div class="cart__header" id="productContainer1">
+            <div>
+              <input class="checkbox" type="checkbox" id="selectAll" />
+              <label class="custom-checkbox" for="selectAll">Выбрать все</label>
+            </div>
+            <img
+              id="hiddeProduct"
+              src="image/icon__arrow.svg"
+              alt="Свернуть/развернуть"
+            />
+          </div>
           <div id="appProduct"><!--Рендер продуктов в наличии--></div>
           <div class="cart-not-available" id="appProductOut">
             <!--Рендер продуктов не в наличии-->
