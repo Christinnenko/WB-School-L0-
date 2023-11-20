@@ -1,3 +1,5 @@
+//Рендер продуктов не в наличии
+
 import { hideProduct } from "./hideProduct.js";
 
 export function renderAppProductOut() {

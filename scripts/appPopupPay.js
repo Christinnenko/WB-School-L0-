@@ -1,3 +1,5 @@
+//Рендер попапа "Cпособ оплаты"
+
 import { closePopup } from "./openPopup.js";
 
 export function renderAppPopupPay() {
@@ -58,7 +60,6 @@ export function renderAppPopupPay() {
 </div>
   `;
 
-  // Вставляем HTML-разметку в контейнер
   appPopupPay.innerHTML = htmlPopupPay;
 
   closePopup();

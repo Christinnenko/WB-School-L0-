@@ -1,3 +1,5 @@
+//Рендер формы для заполнения пользователем
+
 import { validateForm } from "./validationForm.js";
 
 export function renderAppForm() {
@@ -61,7 +63,6 @@ export function renderAppForm() {
     </div>
   `;
 
-  // Вставляем HTML-разметку в контейнер
   appForm.innerHTML = htmlPersonalForm;
 
   validateForm();

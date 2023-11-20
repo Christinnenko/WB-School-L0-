@@ -1,3 +1,5 @@
+//Рендер продуктов в наличии
+
 import { hideProduct } from "./hideProduct.js";
 
 export function renderAppProduct() {
@@ -309,7 +311,6 @@ export function renderAppProduct() {
   </div>
   `;
 
-  // Вставляем HTML-разметку в контейнер
   appProduct.innerHTML = htmlProduct;
 
   hideProduct("hiddenProduct1", "product1", "productContainer1");

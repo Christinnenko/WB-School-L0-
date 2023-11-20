@@ -1,3 +1,5 @@
+//функции открытия и закрытия попапов
+
 import { renderAppPopupDelivery } from "./appPopupDelivery.js";
 import { renderAppPopupPay } from "./appPopupPay.js";
 

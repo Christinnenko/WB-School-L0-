@@ -1,3 +1,5 @@
+//Рендер поля "Cпособ доставки"
+
 export function renderAppDelivery() {
   let appDelivery = document.getElementById("appDelivery");
 
@@ -85,6 +87,5 @@ export function renderAppDelivery() {
     </p>
   </div>`;
 
-  // Вставляем HTML-разметку в контейнер
   appDelivery.innerHTML = htmlDelivery;
 }

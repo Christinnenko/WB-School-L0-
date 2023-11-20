@@ -1,3 +1,5 @@
+//валидация формы для заполнения пользователем
+
 export function validateForm() {
   // Поля формы
   const fields = ["firstName", "lastName", "email", "phone", "inn"];

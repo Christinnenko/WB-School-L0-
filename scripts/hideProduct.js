@@ -1,4 +1,4 @@
-// Общая функция для скрытия/показа продукта
+// Функция для скрытия/показа продуктов
 export function hideProduct(buttonId, productId, containerId) {
   let isShowProduct = false;
   const hideButton = document.getElementById(buttonId);

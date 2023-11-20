@@ -1,3 +1,5 @@
+//Рендер попапа "Cпособ доставки"
+
 import { closePopup } from "./openPopup.js";
 
 export function renderAppPopupDelivery() {
@@ -87,6 +89,8 @@ export function renderAppPopupDelivery() {
   appPopupDelivery.innerHTML = htmlPopupDelivery;
 
   closePopup();
+
+  //изменение содержимого попапа
 
   const pickUpPointButton = document.getElementById("pick-up-point");
   const courierButton = document.getElementById("courier");

@@ -1,3 +1,5 @@
+//Рендер поля итоговой информации о заказе
+
 import { openPopup } from "./openPopup.js";
 
 export function renderAppOrderResult() {
@@ -87,7 +89,6 @@ export function renderAppOrderResult() {
   </div>
       `;
 
-  // Вставляем HTML-разметку в контейнер
   appOrderResult.innerHTML = htmlOrderResult;
 
   openPopup();
