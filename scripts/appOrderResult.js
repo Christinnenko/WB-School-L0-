@@ -92,12 +92,12 @@ export function renderAppOrderResult() {
       `;
 
   appOrderResult.innerHTML = htmlOrderResult;
-
+  updateTotalSum(totalSum);
   openPopup();
   calculateTotalSum();
 }
 
-function calculateTotalSum() {
+export function calculateTotalSum() {
   // Получаем все элементы с ценами
   const finalSumElements = document.querySelectorAll(
     ".cart-product__final-price"

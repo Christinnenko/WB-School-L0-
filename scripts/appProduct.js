@@ -2,12 +2,14 @@
 //Рендер продуктов в наличии
 
 import { hideProducts, activeChoiceAll } from "./choiceProduct.js";
+import { updateTotalSum, calculateTotalSum } from "./appOrderResult.js";
 
 export const userProducts = [
   {
     id: 1,
     name: "Футболка UZcotton мужская",
     image: "image/product__t-shirt.jpg",
+    bigImage: "image/big_product__t-shirt.jpg",
     color: "белый",
     size: 56,
     warehouse: "Коледино WB",
@@ -21,6 +23,7 @@ export const userProducts = [
     id: 2,
     name: "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
     image: "image/product__phone-case.jpg",
+    bigImage: "image/big_product__phone-case.jpg",
     color: "прозрачный",
     size: null,
     warehouse: "Коледино WB",
@@ -34,6 +37,7 @@ export const userProducts = [
     id: 3,
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
     image: "image/product__colour-pencils.jpg",
+    bigImage: "image/big_product__colour-pencils.jpg",
     color: null,
     size: null,
     warehouse: "Коледино WB",
@@ -62,13 +66,26 @@ export function renderAppProduct() {
             <label class="custom-checkbox" for="select${
               userProduct.id
             }"></label>
-            <a href="#"
-              ><img
-                src="${userProduct.image}"
-                alt="${userProduct.name}"
-            /></a>
+            <a href="#">
+            <img
+              src="${userProduct.image}"
+              srcset="${userProduct.bigImage} 1401w"
+              sizes="(min-width: 1401px) 72px, 100vw"
+              alt="${userProduct.name}"
+            />
+          </a>
           </div>
           <div class="cart-product__options">
+          <div class="cart-product__price-mob">	
+          <p data-final-price="${
+            userProduct.finalPrice
+          }" class="cart-product__final-price">
+            ${userProduct.finalPrice}<span> сом</span>
+          </p>
+          <p data-old-price="${
+            userProduct.oldPrice
+          }" class="cart-product__old-price">${userProduct.oldPrice} сом</p>
+          </div>
             <p class="cart-product__name">${userProduct.name}</p>
             <div class="cart-product__option">
             ${
@@ -85,8 +102,7 @@ export function renderAppProduct() {
             <p class="cart-product__warehouse">${userProduct.warehouse}</p>
             <div class="cart-product__seller-box">
               <p class="cart-product__seller">${userProduct.seller}</p>
-              <img
-                src="image/icon__information.svg"
+              <img src="image/icon__information.svg"
                 alt="Информация о продавце"
               />
             </div>
@@ -102,7 +118,7 @@ export function renderAppProduct() {
             />
             ${
               userProduct.remaining > 2
-                ? ""
+                ? `<p class="cart-product__remaining"></p>`
                 : `
               <p class="cart-product__remaining">Осталось ${userProduct.remaining} шт.</p>
             `
@@ -207,32 +223,39 @@ function addQuantityEventListeners() {
   quantityInputs.forEach((quantityInput) => {
     quantityInput.addEventListener("input", () => {
       const productElement = quantityInput.closest(".cart-product");
-      const finalPriceElement = productElement.querySelector(
+      const finalPriceElements = productElement.querySelectorAll(
         ".cart-product__final-price"
       );
-      const oldPriceElement = productElement.querySelector(
+      const oldPriceElements = productElement.querySelectorAll(
         ".cart-product__old-price"
       );
 
-      const currentFinalPrice = parseFloat(
-        finalPriceElement.getAttribute("data-final-price")
-      );
-      const currentOldPrice = parseFloat(
-        oldPriceElement.getAttribute("data-old-price")
-      );
-      const userEnteredQuantity = quantityInput.value;
+      finalPriceElements.forEach((finalPriceElement) => {
+        const currentFinalPrice = parseFloat(
+          finalPriceElement.getAttribute("data-final-price")
+        );
+        const userEnteredQuantity = quantityInput.value;
+        const newFinalPrice = currentFinalPrice * userEnteredQuantity;
+        finalPriceElement.innerHTML = `${newFinalPrice} сом`;
 
-      const newFinalPrice = currentFinalPrice * userEnteredQuantity;
-      const newOldPrice = currentOldPrice * userEnteredQuantity;
+        if (newFinalPrice > 999) {
+          finalPriceElement.style.fontSize = "16px";
+        } else {
+          finalPriceElement.style.fontSize = "";
+        }
+      });
 
-      finalPriceElement.innerHTML = `${newFinalPrice} сом`;
-      oldPriceElement.innerHTML = `${newOldPrice} сом`;
+      oldPriceElements.forEach((oldPriceElement) => {
+        const currentOldPrice = parseFloat(
+          oldPriceElement.getAttribute("data-old-price")
+        );
+        const userEnteredQuantity = quantityInput.value;
+        const newOldPrice = currentOldPrice * userEnteredQuantity;
+        oldPriceElement.innerHTML = `${newOldPrice} сом`;
+      });
 
-      if (newFinalPrice > 999) {
-        finalPriceElement.style.fontSize = "16px";
-      } else {
-        finalPriceElement.style.fontSize = "";
-      }
+      const totalSum = calculateTotalSum();
+      updateTotalSum(totalSum);
     });
   });
 }

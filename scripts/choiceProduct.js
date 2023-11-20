@@ -7,7 +7,6 @@ export function hideProducts(buttonId, containerId) {
   const borderElements = document.querySelectorAll(".cart__header");
 
   if (!hideButton || !productContainer) {
-    console.error(`Button or container not found.`);
     return;
   }
 

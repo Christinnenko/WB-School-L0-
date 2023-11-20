@@ -234,6 +234,8 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 }
 
 .checkbox-container img {
+  width: 72px;
+  height: 96px;
   border-radius: 8px;
 }
 
@@ -275,7 +277,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   display: flex;
   flex-direction: column;
   gap: 21px;
-  margin-bottom: 32px;
+  margin-bottom: 21px;
 }
 
 .cart-product {
@@ -301,6 +303,10 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 .cart-product__color,
 .cart-product__size {
   margin-bottom: 5px;
+}
+
+.cart-not-available {
+  margin-top: 30px;
 }
 
 .cart-product__options {
@@ -485,6 +491,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   flex-direction: column;
   gap: 17px;
   min-width: 590px;
+  margin-top: 34px;
 }
 
 .cart-result-order-container {
@@ -1006,6 +1013,11 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   .cart-product {
     justify-content: space-between;
   }
+
+  .checkbox-container img {
+    width: 72px;
+    height: 96px;
+  }
 }
 
 @media (min-width: 1300px) and (max-width: 1400px) {
@@ -1023,6 +1035,11 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 
   .return span {
     display: inline;
+  }
+
+  .checkbox-container img {
+    width: 72px;
+    height: 96px;
   }
 }
 
@@ -1213,6 +1230,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   .cart-product__remaining {
     line-height: 32px;
     margin-left: 8px;
+    width: 87px;
   }
 
   .cart-product__actions {
@@ -1229,6 +1247,7 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 
   .cart-product-container {
     gap: 0;
+    margin-bottom: 0;
   }
 
   .cart-result-order-container {

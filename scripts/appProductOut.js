@@ -24,8 +24,10 @@ export function renderAppProductOut() {
           ></label>
           <a href="#"
             ><img
-              src="image/product__t-shirt.jpg"
-              alt="Футболка мужская"
+            src="image/product__t-shirt.jpg"
+            srcset="image/big_product__t-shirt.jpg 1401w"
+            sizes="(min-width: 1401px) 72px, 100vw"
+            alt="Футболка UZcotton мужская"
           /></a>
         </div>
         <div class="cart-product__options out-of-stock">
@@ -125,8 +127,10 @@ export function renderAppProductOut() {
           ></label>
           <a href="#"
             ><img
-              src="image/product__phone-case.jpg"
-              alt="Силиконовый чехол для телефона"
+            src="image/product__phone-case.jpg"
+            srcset="image/big_product__phone-case.jpg 1401w"
+            sizes="(min-width: 1401px) 72px, 100vw"
+            alt="Силиконовый чехол картхолдер (отверстия) для карт"
           /></a>
         </div>
         <div class="cart-product__options out-of-stock">
@@ -224,8 +228,9 @@ export function renderAppProductOut() {
           ></label>
           <a href="#"
             ><img
-              src="image/product__colour-pencils.jpg"
-              alt="Карандаши цветные"
+            src="image/product__colour-pencils.jpg"
+            srcset="image/big_product__colour-pencils.jpg 1401w"
+            alt="Карандаши цветные Faber-Castell"
           /></a>
         </div>
         <div class="cart-product__options out-of-stock">
