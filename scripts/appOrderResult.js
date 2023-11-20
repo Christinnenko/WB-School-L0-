@@ -5,11 +5,13 @@ import { openPopup } from "./openPopup.js";
 export function renderAppOrderResult() {
   let appOrderResult = document.getElementById("appOrderResult");
 
+  let totalSum = calculateTotalSum();
+
   let htmlOrderResult = `
     <div>
     <div class="cart-result">
       <p>Итого</p>
-      <p>2 101 063 <span>сом</span></p>
+      <p>${totalSum}<span> сом</span></p>
     </div>
     <div class="cart-order-container">
       <div class="cart-order__info">
@@ -64,7 +66,7 @@ export function renderAppOrderResult() {
       <p>1234 12•• •••• 1234</p>
     </div>
     <div class="cart-order__card-pay-now">
-      <input class="checkbox" type="checkbox" id="select-pay-now" />
+      <input class="checkbox-pay" type="checkbox" id="select-pay-now" />
       <label
         class="custom-checkbox custom-checkbox-pay"
         for="select-pay-now"
@@ -92,4 +94,36 @@ export function renderAppOrderResult() {
   appOrderResult.innerHTML = htmlOrderResult;
 
   openPopup();
+  calculateTotalSum();
+}
+
+function calculateTotalSum() {
+  // Получаем все элементы с ценами
+  const finalSumElements = document.querySelectorAll(
+    ".cart-product__final-price"
+  );
+
+  // Инициализируем переменную для итоговой суммы
+  let totalSum = 0;
+
+  // Проходим по всем элементам и суммируем цены
+  finalSumElements.forEach((finalSumElement) => {
+    const currentFinalSum = parseFloat(
+      finalSumElement.getAttribute("data-final-price")
+    );
+
+    // Добавим проверку на NaN
+    if (!isNaN(currentFinalSum)) {
+      totalSum += currentFinalSum;
+    }
+  });
+
+  return totalSum;
+}
+
+export function updateTotalSum(totalSum) {
+  const totalSumElement = document.querySelector(".cart-result p:last-child");
+  if (totalSumElement) {
+    totalSumElement.innerHTML = `${totalSum} <span>сом</span>`;
+  }
 }

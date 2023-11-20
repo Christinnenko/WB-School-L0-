@@ -1,6 +1,6 @@
 //Рендер продуктов не в наличии
 
-import { hideProducts } from "./hideProduct.js";
+import { hideProducts } from "./choiceProduct.js";
 
 export function renderAppProductOut() {
   let appProductOut = document.getElementById("appProductOut");

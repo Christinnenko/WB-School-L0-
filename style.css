@@ -218,7 +218,6 @@ input[type="checkbox"] + .custom-checkbox::before {
   background-size: cover;
 }
 
-/* Отступ для текста "Выбрать все" */
 .custom-checkbox {
   display: flex;
   align-items: center;

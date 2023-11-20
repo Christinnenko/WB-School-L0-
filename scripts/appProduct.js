@@ -1,7 +1,7 @@
 //объект с товарами
 //Рендер продуктов в наличии
 
-import { hideProducts } from "./hideProduct.js";
+import { hideProducts, activeChoiceAll } from "./choiceProduct.js";
 
 export const userProducts = [
   {
@@ -25,7 +25,7 @@ export const userProducts = [
     size: null,
     warehouse: "Коледино WB",
     seller: "OOO Мегапрофстиль",
-    quantity: 200,
+    quantity: 1,
     remaining: 500,
     finalPrice: 10500,
     oldPrice: 11500,
@@ -38,7 +38,7 @@ export const userProducts = [
     size: null,
     warehouse: "Коледино WB",
     seller: "OOO Вайлдберриз",
-    quantity: 2,
+    quantity: 1,
     remaining: 2,
     finalPrice: 247,
     oldPrice: 475,
@@ -56,8 +56,12 @@ export function renderAppProduct() {
       <div class="cart-product">
         <div class="cart-product__left">
           <div class="checkbox-container">
-            <input class="checkbox" type="checkbox" id="select${userProduct.id}" />
-            <label class="custom-checkbox" for="select${userProduct.id}"></label>
+            <input class="checkbox" type="checkbox" id="select${
+              userProduct.id
+            }" />
+            <label class="custom-checkbox" for="select${
+              userProduct.id
+            }"></label>
             <a href="#"
               ><img
                 src="${userProduct.image}"
@@ -65,17 +69,19 @@ export function renderAppProduct() {
             /></a>
           </div>
           <div class="cart-product__options">
-            <div class="cart-product__price-mob">
-              <p class="cart-product__final-price">
-                522<span> сом</span>
-              </p>
-              <p class="cart-product__old-price">1051 сом</p>
-            </div>
             <p class="cart-product__name">${userProduct.name}</p>
             <div class="cart-product__option">
-              <p class="cart-product__color">Цвет: ${userProduct.color}</p>
-              <p class="cart-product__size">Размер: ${userProduct.size}</p>
-            </div>
+            ${
+              userProduct.color
+                ? `<p class="cart-product__color">Цвет: ${userProduct.color}</p>`
+                : ""
+            }
+            ${
+              userProduct.size
+                ? `<p class="cart-product__size">Размер: ${userProduct.size}</p>`
+                : ""
+            }
+          </div>
             <p class="cart-product__warehouse">${userProduct.warehouse}</p>
             <div class="cart-product__seller-box">
               <p class="cart-product__seller">${userProduct.seller}</p>
@@ -94,7 +100,13 @@ export function renderAppProduct() {
               value="${userProduct.quantity}"
               min="1"
             />
-            <p class="cart-product__remaining">Осталось ${userProduct.remaining} шт.</p>
+            ${
+              userProduct.remaining > 2
+                ? ""
+                : `
+              <p class="cart-product__remaining">Осталось ${userProduct.remaining} шт.</p>
+            `
+            }
             <div class="cart-product__actions">
               <a href="#"
                 ><svg
@@ -141,11 +153,16 @@ export function renderAppProduct() {
             </div>
           </div>
           <div class="cart-product__price">
-            <p class="cart-product__final-price">
-            ${userProduct.finalPrice}<span> сом</span>
-            </p>
-            <p class="cart-product__old-price">${userProduct.oldPrice} сом</p>
-          </div>
+  <p data-final-price="${
+    userProduct.finalPrice
+  }" class="cart-product__final-price">
+    ${userProduct.finalPrice}<span> сом</span>
+  </p>
+  <p data-old-price="${userProduct.oldPrice}" class="cart-product__old-price">${
+          userProduct.oldPrice
+        } сом</p>
+</div>
+
         </div>
       </div>
     </div>
@@ -155,6 +172,67 @@ export function renderAppProduct() {
 
     appProduct.innerHTML = htmlProduct;
 
+    setFontSizeForPrices();
+    addQuantityEventListeners();
     hideProducts("hiddeProduct", "appProduct");
+    activeChoiceAll();
+  });
+}
+
+//функция установки размера шрифта цены(при цене более 999)
+function setFontSizeForPrices() {
+  const finalPriceElements = document.querySelectorAll(
+    ".cart-product__final-price"
+  );
+
+  finalPriceElements.forEach((finalPriceElement) => {
+    const currentFinalPrice = parseFloat(
+      finalPriceElement.getAttribute("data-final-price")
+    );
+
+    if (currentFinalPrice > 999) {
+      finalPriceElement.style.fontSize = "16px";
+    } else {
+      finalPriceElement.style.fontSize = "";
+    }
+  });
+}
+
+//функция установки цены в зависимости от количества выбранных товаров
+function addQuantityEventListeners() {
+  const quantityInputs = document.querySelectorAll(
+    ".cart-product__quantity-count"
+  );
+
+  quantityInputs.forEach((quantityInput) => {
+    quantityInput.addEventListener("input", () => {
+      const productElement = quantityInput.closest(".cart-product");
+      const finalPriceElement = productElement.querySelector(
+        ".cart-product__final-price"
+      );
+      const oldPriceElement = productElement.querySelector(
+        ".cart-product__old-price"
+      );
+
+      const currentFinalPrice = parseFloat(
+        finalPriceElement.getAttribute("data-final-price")
+      );
+      const currentOldPrice = parseFloat(
+        oldPriceElement.getAttribute("data-old-price")
+      );
+      const userEnteredQuantity = quantityInput.value;
+
+      const newFinalPrice = currentFinalPrice * userEnteredQuantity;
+      const newOldPrice = currentOldPrice * userEnteredQuantity;
+
+      finalPriceElement.innerHTML = `${newFinalPrice} сом`;
+      oldPriceElement.innerHTML = `${newOldPrice} сом`;
+
+      if (newFinalPrice > 999) {
+        finalPriceElement.style.fontSize = "16px";
+      } else {
+        finalPriceElement.style.fontSize = "";
+      }
+    });
   });
 }

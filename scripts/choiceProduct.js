@@ -26,3 +26,16 @@ export function hideProducts(buttonId, containerId) {
       : "image/icon__arrow.svg";
   });
 }
+
+// Функция для установки активного состояния чекбоксов при выборе "Выбрать все"
+export function activeChoiceAll() {
+  const selectAllCheckbox = document.getElementById("selectAll");
+
+  selectAllCheckbox.addEventListener("change", () => {
+    const productCheckboxes = document.querySelectorAll(".checkbox");
+
+    productCheckboxes.forEach((checkbox) => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+  });
+}
