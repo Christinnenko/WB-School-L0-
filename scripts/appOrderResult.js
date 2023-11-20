@@ -98,21 +98,17 @@ export function renderAppOrderResult() {
 }
 
 export function calculateTotalSum() {
-  // Получаем все элементы с ценами
   const finalSumElements = document.querySelectorAll(
     ".cart-product__final-price"
   );
 
-  // Инициализируем переменную для итоговой суммы
   let totalSum = 0;
 
-  // Проходим по всем элементам и суммируем цены
   finalSumElements.forEach((finalSumElement) => {
     const currentFinalSum = parseFloat(
       finalSumElement.getAttribute("data-final-price")
     );
 
-    // Добавим проверку на NaN
     if (!isNaN(currentFinalSum)) {
       totalSum += currentFinalSum;
     }
