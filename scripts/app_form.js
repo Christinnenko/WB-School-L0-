@@ -1,6 +1,6 @@
 //Рендер формы для заполнения пользователем
 
-import { validateForm } from "./validationForm.js";
+import { validateForm } from "./validation_form.js";
 
 export function renderAppForm() {
   let appForm = document.getElementById("appForm");

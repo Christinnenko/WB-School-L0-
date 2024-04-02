@@ -6,8 +6,8 @@ export function validateForm() {
 
   // Шаблоны валидации для каждого поля
   const validationPatterns = {
-    firstName: /^[а-яА-Я]+$/, // только русские буквы
-    lastName: /^[а-яА-Я]+$/, // только русские буквы
+    firstName: /^[а-яА-Я]+$/,
+    lastName: /^[а-яА-Я]+$/,
     email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
     phone: /^\+\d{1,3} \d{3} \d{3} \d{2} \d{2}$/,
     inn: /^\d{14}$/, // 14 цифр
