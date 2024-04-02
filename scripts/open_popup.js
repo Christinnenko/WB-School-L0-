@@ -1,7 +1,7 @@
 //функции открытия и закрытия попапов
 
-import { renderAppPopupDelivery } from "./appPopupDelivery.js";
-import { renderAppPopupPay } from "./appPopupPay.js";
+import { renderAppPopupDelivery } from "./app_popup_delivery.js";
+import { renderAppPopupPay } from "./app_popup_pay.js";
 
 export function openPopup() {
   const popupLinks = document.querySelectorAll(".popup-link");
@@ -30,7 +30,7 @@ function renderPopup(popupType) {
 }
 
 export function closePopup() {
-  const closePopups = document.querySelectorAll(".popup__close");
+  const closePopups = document.querySelectorAll(".popup__close-icon");
 
   closePopups.forEach(function (closePopup) {
     closePopup.addEventListener("click", function (event) {

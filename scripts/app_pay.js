@@ -1,6 +1,7 @@
 //Рендер поля "Cпособ оплаты"
 
-import { openPopup } from "./openPopup.js";
+import { userCards } from "./app_popup_pay.js";
+import { openPopup } from "./open_popup.js";
 
 export function renderAppPay() {
   let appPay = document.getElementById("appPay");
@@ -12,12 +13,12 @@ export function renderAppPay() {
   </div>
   <div class="cart-order-result-container">
     <div class="cart-order-result-card">
-      <img src="image/icon__MIR-card.svg" alt="карта МИР" />
-      <p>1234 56•• •••• 1234</p>
-      <p>01/30</p>
+      <img class="card-img select-cart-img" src="${userCards.cards[0].cardImg}" alt="выбранная карта" />
+      <p class="card-number select-cart-number">${userCards.cards[0].cardNumber}</p>
+      <p class="card-date select-cart-date">${userCards.cards[0].cardDate}</p>
     </div>
     <div class="cart-order-result-card-pay">
-      <p>Спишем оплату с карты при получении</p>
+      <p class="pay-now">Спишем оплату с карты при получении</p>
     </div>
   </div>
       `;
